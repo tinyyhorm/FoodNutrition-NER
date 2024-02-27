@@ -3,6 +3,7 @@ Output:
 疾病(disease)
 传染病
 感冒
+龋齿
 胃溃疡
 肠胃炎
 人群(population)
