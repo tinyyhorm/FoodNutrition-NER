@@ -1,2 +1,6 @@
 Text:营养不良(malnutrition):或称营养失调，是指由于一种或几种营养素的缺乏或过剩所造成的机体健康异常或疾病状态。营养不良包括两种表现，即营养觖乏(nutrition deficiency)和营养过剩(nutrition excess)。
 Output:
+疾病(disease)
+营养失调
+营养觖乏
+营养过剩
