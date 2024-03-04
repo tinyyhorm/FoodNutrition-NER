@@ -8,7 +8,6 @@ def getEntities(outputsFile):
             output = output.strip().replace('\n', '')
             if output[:4] == "Text":
                 text = output[5:]
-                print(text)
             if output[:2] in ["食品", "食物", "人群", "器官", "疾病"] :
                 entityType = output[:2]
             elif output[:3] == "营养素":
@@ -28,7 +27,6 @@ def getIndex(text, entities):
         if index_s != -1:
             index_e = index_s + len(entity[-1]) - 1
             labels = getLabel(entity, index_s, index_e)
-            print(labels, entity[-1], index_s)
             for index, label in enumerate(labels):
                 textList[index_s + index] = textList[index_s + index] + ' ' + label
     return textList
@@ -60,8 +58,10 @@ def outputLabeledData(labeledTexts, fileName):
     processedFilePath = './datasets/labeledData/'
     
     with open (processedFilePath + fileName, 'w', encoding='utf-8') as f:
-        for labelText in labeledTexts:
-            f.write(labelText + '\n')
+        for labeledCharacter in labeledTexts:
+            if len(labeledCharacter) == 1:
+                labeledCharacter = labeledCharacter + ' ' + 'O'
+            f.write(labeledCharacter + '\n')
 
 def main():
     fileNames = list()
@@ -70,7 +70,6 @@ def main():
     #fileNames.extend(['C1-5.txt'])
     for index in range(93):
         fileNames.extend([f"C1-{index}.txt"])
-    print(fileNames)
     for fileName in fileNames:
         text, entities = getEntities(originFilePath + fileName)
         labeledText = getIndex(text, entities)
