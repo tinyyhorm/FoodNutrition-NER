@@ -39,9 +39,9 @@
 人 O
 死 O
 于 O
-慢 O
-性 O
-病 O
+慢 B-Disease
+性 I-Disease
+病 I-Disease
 ， O
 已 O
 占 O

@@ -48,8 +48,8 @@
 ， O
 调 O
 整 O
-脂 O
-肪 O
+脂 B-Nutrient
+肪 I-Nutrient
 及 O
 不 B-Nutrient
 饱 I-Nutrient
@@ -67,11 +67,11 @@
 量 O
 的 O
 抗 O
-氧 O
-化 O
-营 O
-养 O
-素 O
+氧 B-Nutrient
+化 I-Nutrient
+营 I-Nutrient
+养 I-Nutrient
+素 I-Nutrient
 ， O
 有 O
 利 O

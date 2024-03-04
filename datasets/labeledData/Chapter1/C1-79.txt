@@ -178,12 +178,12 @@
 源 O
 等 O
 ， O
-脂 O
-类 O
+脂 B-Nutrient
+类 I-Nutrient
 、 O
-蛋 O
-白 O
-质 O
+蛋 B-Nutrient
+白 I-Nutrient
+质 I-Nutrient
 营 O
 养 O
 价 O

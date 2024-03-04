@@ -116,9 +116,9 @@
 改 O
 善 O
 和 O
-慢 O
-性 O
-病 O
+慢 B-Disease
+性 I-Disease
+病 I-Disease
 预 O
 防 O
 工 O

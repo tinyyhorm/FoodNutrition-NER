@@ -179,8 +179,8 @@ B I-Nutrient
 于 O
 摄 O
 入 O
-脂 O
-肪 O
+脂 B-Nutrient
+肪 I-Nutrient
 不 O
 容 O
 易 O
