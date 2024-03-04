@@ -1,11 +1,3 @@
-def getIndex(text, entities):
-    for entity in entities:
-        index_s = text.find(entity[-1])
-        if index_s != -1:
-            index_e = index_s + len(entity) - 1
-            print(entity, index_s, index_e)
-
-
 def getEntities(outputsFile):
     with open(outputsFile, 'r', encoding='utf-8') as outputs:
         entities = []
@@ -26,12 +18,63 @@ def getEntities(outputsFile):
             elif entityType != "":
                 entities.append([entityType, output])
         
-        getIndex(text, entities)
-            
-# test = "Text:营养(nutrition)，原意指“谋求养生”。根据《中国营养科学全书》中的定义，营养指机体通过摄取食物，经过体内消化、吸收和代谢，利用食物中对身体有益的物质作构建机体组织器官、满足生理功能和体力活动需要的过程。"
-# getIndex(test, ["营养", "nutritiin"])
+        return text, entities
 
-for index in range(93):
-    getEntities(f"/Users/tiny-mac/Developer/Datasets/FoodNutrition/outputs/C1-{index}.txt")
-#getEntities("/Users/tiny-mac/Developer/Datasets/FoodNutrition/outputs/C1-3.txt")
+def getIndex(text, entities):
+    textList = list(text)
 
+    for entity in entities:
+        index_s = text.find(entity[-1])
+        if index_s != -1:
+            index_e = index_s + len(entity[-1]) - 1
+            labels = getLabel(entity, index_s, index_e)
+            print(labels, entity[-1], index_s)
+            for index, label in enumerate(labels):
+                textList[index_s + index] = textList[index_s + index] + ' ' + label
+    return textList
+
+def entityFilter(entityType):
+    if entityType == '营养素':
+        entityType = 'Nutrient'
+    elif entityType in['食物', '食品']:
+        entityType = 'Food'
+    elif entityType == '非营养素':
+        entityType = 'Non-nutrient'
+    elif entityType == '人群':
+        entityType = 'Group'
+    elif entityType == '器官':
+        entityType = 'Organ'
+    elif entityType == '疾病':
+        entityType = 'Disease'
+    
+    return entityType
+
+def getLabel(entity, index_s, index_e):
+    entityType = entityFilter(entity[0])
+    labels = ['B-' + entityType]
+    if len(entity[-1]) > 1:
+        labels.extend(['I-' + entityType] * (index_e - index_s))
+    return labels
+
+def outputLabeledData(labeledTexts, fileName):
+    processedFilePath = './datasets/labeledData/'
+    
+    with open (processedFilePath + fileName, 'w', encoding='utf-8') as f:
+        for labelText in labeledTexts:
+            f.write(labelText + '\n')
+
+def main():
+    fileNames = list()
+    originFilePath = './outputs/'
+
+    #fileNames.extend(['C1-5.txt'])
+    for index in range(93):
+        fileNames.extend([f"C1-{index}.txt"])
+    print(fileNames)
+    for fileName in fileNames:
+        text, entities = getEntities(originFilePath + fileName)
+        labeledText = getIndex(text, entities)
+        outputLabeledData(labeledText, fileName)
+
+if __name__ == '__main__':
+    main()
