@@ -28,7 +28,10 @@ def getIndex(text, entities):
             index_e = index_s + len(entity[-1]) - 1
             labels = getLabel(entity, index_s, index_e)
             for index, label in enumerate(labels):
-                textList[index_s + index] = textList[index_s + index] + ' ' + label
+                # get unique entity
+                if len(textList[index_s + index]) == 1:
+                    textList[index_s + index] = textList[index_s + index] + ' ' + label
+
     return textList
 
 def entityFilter(entityType):
@@ -54,18 +57,17 @@ def getLabel(entity, index_s, index_e):
         labels.extend(['I-' + entityType] * (index_e - index_s))
     return labels
 
-def outputLabeledData(labeledTexts, fileName):
-    processedFilePath = './datasets/labeledData/'
-    
+def outputLabeledData(processedFilePath, labeledTexts, fileName):
     with open (processedFilePath + fileName, 'w', encoding='utf-8') as f:
         for labeledCharacter in labeledTexts:
             if len(labeledCharacter) == 1:
                 labeledCharacter = labeledCharacter + ' ' + 'O'
             f.write(labeledCharacter + '\n')
-
+            
 def main():
     fileNames = list()
     originFilePath = './outputs/'
+    processedFilePath = './datasets/labeledData/'
 
     #fileNames.extend(['C1-5.txt'])
     for index in range(93):
@@ -73,7 +75,7 @@ def main():
     for fileName in fileNames:
         text, entities = getEntities(originFilePath + fileName)
         labeledText = getIndex(text, entities)
-        outputLabeledData(labeledText, fileName)
+        outputLabeledData(processedFilePath, labeledText, fileName)
 
 if __name__ == '__main__':
     main()
