@@ -3,6 +3,7 @@ Output:
 营养素(nutrient)
 碘
 疾病(disease)
+儿童生长发育受阻
 侏儒症
 呆小症(克汀病)
 人群(population)
@@ -11,7 +12,3 @@ Output:
 怀孕期妇女
 器官
 大脑
-身高
-体重
-肌肉
-骨骼

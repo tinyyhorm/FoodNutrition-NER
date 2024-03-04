@@ -5,7 +5,6 @@ Output:
 铁
 锌
 疾病(disease)
-精神和行为异常(psychological and behavioral abnormalities)
 神经精神症状
 睡眠时惊跳
 烦躁不安

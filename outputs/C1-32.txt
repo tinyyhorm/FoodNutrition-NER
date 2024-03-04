@@ -3,6 +3,8 @@ Output:
 营养素(nutrient)
 铬
 硒
+非营养素
+氧自由基
 疾病(disease)
 糖尿病
 癌症

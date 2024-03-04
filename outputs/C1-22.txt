@@ -7,9 +7,9 @@ Output:
 维生素D
 疾病(disease)
 佝偻病
+体格发育异常
 人群(population)
 幼儿
 婴幼儿
 器官
-骨骼
 牙齿
