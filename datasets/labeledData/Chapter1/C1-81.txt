@@ -144,10 +144,10 @@
 防 O
 这 O
 些 O
-慢 O B-Disease
-性 O I-Disease
-疾 O I--Disease
-病 O
+慢 B-Disease
+性 I-Disease
+疾 I--Disease
+病 I--Disease
 的 O
 膳 O
 食 O
