@@ -146,8 +146,8 @@
 些 O
 慢 B-Disease
 性 I-Disease
-疾 I--Disease
-病 I--Disease
+疾 I-Disease
+病 I-Disease
 的 O
 膳 O
 食 O

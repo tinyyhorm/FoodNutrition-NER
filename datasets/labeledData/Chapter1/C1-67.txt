@@ -426,7 +426,7 @@ m O
 % O
 ; O
 儿 B-Group
-童 B-Group
+童 I-Group
 低 B-Disease
 体 I-Disease
 重 I-Disease
