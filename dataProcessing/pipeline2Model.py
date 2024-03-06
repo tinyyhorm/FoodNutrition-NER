@@ -17,13 +17,16 @@ def text2WordsPos():
 
 def listSplit(words, pos):
     lastIndex = 0
+    lenIndex = 0
     splitedWords, splitedPos = list(), list()
 
     for index, character in enumerate(words):
-        if character in ['，', '。']:
+        lenIndex += 1
+        if character in ['，', '。'] or (lenIndex >= 16 and pos[index] == 'O'):
             splitedWords.append(words[lastIndex : index + 1])
             splitedPos.append(pos[lastIndex : index + 1])
             lastIndex = index + 1
+            lenIndex = 0
     return splitedWords, splitedPos
 
 def listShuffle(words, pos):
@@ -59,6 +62,11 @@ def encapsulate(words, pos, mode):
             outputFile.write(json.dumps(jsonLine, ensure_ascii=False) + '\n')
 
 def encapsulateAll(shuffledWords, shuffledPos):
+    longestLen = 0
+    for words in shuffledWords:
+        if len(words) > longestLen:
+            longestLen = len(words)
+    print(longestLen)
     encapsulate(shuffledWords, shuffledPos, 'all')
     encapsulate(shuffledWords[:606], shuffledPos[:606], 'train')
     encapsulate(shuffledWords[606:], shuffledPos[606:], 'test')
