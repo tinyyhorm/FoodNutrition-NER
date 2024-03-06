@@ -7,6 +7,7 @@ def text2WordsPos():
     for filePathName in filePathNames:
         with open(filePathName, 'r', encoding='utf-8') as lineCharacterLabelData:
             for line in lineCharacterLabelData:
+                line = filterLine(line)
                 if(len(line.split())) != 2:
                     words.append('。')
                     pos.append('O')
@@ -14,6 +15,10 @@ def text2WordsPos():
                     words.append(line.split()[0])
                     pos.append(line.split()[1])
     return words, pos
+
+def filterLine(line):
+    line = line.replace('Non-Nutrient', 'NotNutrient')
+    return line
 
 def listSplit(words, pos):
     lastIndex = 0
@@ -42,7 +47,7 @@ def listShuffle(words, pos):
             
 def getFilePathNames():
     filePathNames = list()
-    processedFilePath = './datasets/labeledData/Chapter1/'
+    processedFilePath = './datasets/ChatGPT Data/'
     #fileNames.extend(['C1-5.txt'])
     for index in range(93):
         filePathNames.extend([processedFilePath + f"C1-{index}.txt"])
@@ -50,7 +55,7 @@ def getFilePathNames():
 
 def encapsulate(words, pos, mode):
     jsonLine = dict()
-    outputPath = './datasets/'
+    outputPath = './datasets/Human Review Data/'
     fileName = mode + '.json'
 
     with open(outputPath + fileName, 'w', encoding='utf-8') as outputFile:
@@ -61,22 +66,19 @@ def encapsulate(words, pos, mode):
             }
             outputFile.write(json.dumps(jsonLine, ensure_ascii=False) + '\n')
 
-def encapsulateAll(shuffledWords, shuffledPos):
-    longestLen = 0
-    for words in shuffledWords:
-        if len(words) > longestLen:
-            longestLen = len(words)
-    print(longestLen)
+def encapsulateAll(shuffledWords, shuffledPos, proportion):
+    splitIndex = int(len(shuffledWords) * proportion)
+
     encapsulate(shuffledWords, shuffledPos, 'all')
-    encapsulate(shuffledWords[:606], shuffledPos[:606], 'train')
-    encapsulate(shuffledWords[606:], shuffledPos[606:], 'test')
+    encapsulate(shuffledWords[:splitIndex], shuffledPos[:splitIndex], 'train')
+    encapsulate(shuffledWords[splitIndex:], shuffledPos[splitIndex:], 'test')
 
 
 def main():
     words, pos = text2WordsPos()
     splitedWords, splitedPos = listSplit(words, pos)
     shuffledWords, shuffledPos = listShuffle(splitedWords, splitedPos)
-    encapsulateAll(shuffledWords, shuffledPos)
+    encapsulateAll(shuffledWords, shuffledPos, 0.8)
 
 
 if __name__ == "__main__":

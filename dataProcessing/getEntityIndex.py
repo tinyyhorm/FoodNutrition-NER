@@ -40,7 +40,7 @@ def entityFilter(entityType):
     elif entityType in['食物', '食品']:
         entityType = 'Food'
     elif entityType == '非营养素':
-        entityType = 'Non-nutrient'
+        entityType = 'Non-Nutrient'
     elif entityType == '人群':
         entityType = 'Group'
     elif entityType == '器官':
@@ -66,8 +66,8 @@ def outputLabeledData(processedFilePath, labeledTexts, fileName):
             
 def main():
     fileNames = list()
-    originFilePath = './datasets/ChatGPT Outputs/'
-    processedFilePath = './datasets/labeledData/'
+    originFilePath = './datasets/originText/ChatGPT Outputs/'
+    processedFilePath = './datasets/ChatGPT Data/'
 
     #fileNames.extend(['C1-5.txt'])
     for index in range(93):

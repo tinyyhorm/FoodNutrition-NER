@@ -1,0 +1,2 @@
+Text:营养学(nutrition或nutriology)：是研究人体营养与健康关系的一门学科。随着营养学的发展，出现了许多营养学分支学科，如人类(基础)营养学(human nutrition)、临床(医学)营养学(clinical nutrition)、食品营养学(food nutrition)等。
+Output:

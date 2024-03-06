@@ -1,0 +1,2 @@
+Text:营养价值(nutritional value):指食物中营养素及能量满足人体需要的程度。
+Output:

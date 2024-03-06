@@ -1,0 +1,2 @@
+Text:(2)推荐摄入量(recommended nutrient intake, RNI;相当于过去使用的recommended dietary allowance, RDA):指满足某一特定性别、年龄及生理状况群体中97%~98%个体需要量的摄人水平。如果需求量呈正态分布时，则RNI=EAR+2SD(标准差)，如果EAR的变量不足以计算SD时，可假设10%EAR=1SD,则RDA=1. 2EAR。
+Output:

@@ -1,0 +1,1211 @@
+F1_Score:		0.4503311258278146
+Nutrient		0.6233766233766234
+NotNutrient		0
+Food		0.3448275862068966
+Group		0.16666666666666666
+Organ		0
+Disease		0.3076923076923077
+good case 0: 
+sentence: ['苏', '氨', '酸', '、', '色', '氨', '酸', '、', '缬', '氨', '酸', '、', '组', '氨', '酸', ';']
+golden label: ['B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+model pred: ['B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+good case 1: 
+sentence: ['2', '0', '%', '下', '降', '到', '近', '3', '%', ';', '出', '生', '时', '期', '望', '寿']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 2: 
+sentence: ['食', '物', '中', '许', '多', '非', '营', '养', '素', '生', '物', '活', '性', '成', '分', '特']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 3: 
+sentence: ['、', '实', '践', '和', '取', '得', '珍', '贵', '经', '验', '的', '基', '础', '上', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 4: 
+sentence: ['1', '%', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+bad case 5: 
+sentence: ['在', '年', '轻', '受', '试', '者', '中', '也', '可', '观', '察', '到', '同', '样', '效', '果']
+golden label: ['O', 'B-Group', 'I-Group', 'I-Group', 'I-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 6: 
+sentence: ['n', 'u', 't', 'r', 'i', 'e', 'n', 't', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 7: 
+sentence: ['展', '?', '4', '.', '。']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 8: 
+sentence: ['重', '点', '考', '虑', '的', '人', '群', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 9: 
+sentence: ['世', '纪', '5', '0', '年', '代', '初', '期', '的', '2', '.', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 10: 
+sentence: ['1', '万', 't', '，']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 11: 
+sentence: ['以', '及', '合', '理', '的', '膳', '食', '原', '则', '等', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 12: 
+sentence: ['认', '为', '营', '养', '素', '不', '仅', '具', '有', '预', '防', '营', '养', '缺', '乏', '病']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'I-Disease']
+bad case 13: 
+sentence: ['锰', '等', '微', '量', '元', '素', '和', '维', '生', '素', 'B', '2', '是', '体', '内', '抗']
+golden label: ['B-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Food', 'I-Food', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+good case 14: 
+sentence: ['2', '0', '世', '纪', '3', '0', '年', '代', '后', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 15: 
+sentence: ['化', '的', '营', '养', '需', '求', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 16: 
+sentence: ['强', '化', '、', '保', '健', '食', '品', '等', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 17: 
+sentence: ['高', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 18: 
+sentence: ['1', '.', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 19: 
+sentence: ['r', 'y', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 20: 
+sentence: ['素', '来', '解', '释', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 21: 
+sentence: ['因', '此', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 22: 
+sentence: ['记', '载', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+bad case 23: 
+sentence: ['我', '国', '城', '乡', '居', '民', '的', '膳', '食', '、', '营', '养', '状', '况', '有', '了']
+golden label: ['O', 'O', 'B-Group', 'I-Group', 'I-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 24: 
+sentence: ['工', '作', '的', '重', '点', '我', '国', '分', '别', '于', '1', '9', '5', '9', '年', '、']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 25: 
+sentence: ['防', '工', '作', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 26: 
+sentence: ['系', '列', '研', '究', '表', '明', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 27: 
+sentence: ['的', '工', '业', '部', '门', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+bad case 28: 
+sentence: ['同', '型', '半', '胱', '氨', '酸', '水', '平', '升', '高', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['B-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 29: 
+sentence: ['-', '亚', '麻', '酸', '及', '其', '在', '体', '内', '形', '成', '的', '二', '十', '碳', '五', '烯', '酸', '和']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 30: 
+sentence: ['食', '品', '强', '化', '建', '立', '了', '政', '府', '的', '监', '督', '、', '管', '理', '体']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 31: 
+sentence: ['i', 'n', 't', 'a', 'k', 'e', ',', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 32: 
+sentence: ['确', '定', '了', '优', '先', '发', '展', '的', '重', '点', '领', '域', '、', '地', '区', '和']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 33: 
+sentence: ['就', '。']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 34: 
+sentence: ['a', 'n', 'd', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 35: 
+sentence: ['康', '人', '群', '对', '某', '种', '营', '养', '素', '的', '摄', '人', '量', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 36: 
+sentence: ['不', '仅', '妨', '碍', '他', '们', '正', '常', '的', '体', '质', '发', '育', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 37: 
+sentence: ['提', '出', '了', '一', '些', '新', '概', '念', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 38: 
+sentence: ['g', 'e', 'l', '通', '过', '对', '当', '时', '英', '格', '兰', '、', '威', '尔', '士', '和']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 39: 
+sentence: ['变', '得', '更', '易', '于', '消', '化', '、', '吸', '收', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 40: 
+sentence: ['发', '挥', '其', '在', '改', '善', '营', '养', '与', '提', '高', '人', '民', '健', '康', '水']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 41: 
+sentence: ['目', '的', '是', '为', '了', '限', '制', '膳', '食', '和', '来', '自', '强', '化', '食', '物']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 42: 
+sentence: ['除', '应', '用', '抗', '心', '律', '失', '常', '的', '西', '药', '和', '抗', '病', '毒', '、']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 43: 
+sentence: ['如', '粮', '食', '、', '蔬', '菜', '、', '肉', '类', '、', '水', '产', '品', '类', '等', '。']
+golden label: ['O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'I-Food', 'I-Food', 'O', 'O']
+model pred: ['O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'I-Food', 'I-Food', 'O', 'O']
+good case 44: 
+sentence: ['E', 'A', 'R', ')', ':', '指', '满', '足', '某', '一', '特', '定', '性', '别', '、', '年']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 45: 
+sentence: ['更', '加', '重', '视', '如', '何', '使', '广', '大', '人', '民', '群', '众', '得', '到', '实']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 46: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+good case 47: 
+sentence: ['人', '均', '肉', '类', '产', '量', '增', '长', '速', '度', '高', '于', '人', '均', '谷', '物']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 48: 
+sentence: ['改', '善', '儿', '童', '生', '长', '发', '育', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 49: 
+sentence: ['合', '作', '用', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+bad case 50: 
+sentence: ['基', '酸', '的', '强', '化', '食', '品', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 51: 
+sentence: ['，']
+golden label: ['O']
+model pred: ['O']
+good case 52: 
+sentence: ['征', '、', '原', '料', '、', '加', '工', '、', '功', '能', '评', '价', '及', '管', '理', '等']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 53: 
+sentence: ['氧', '化', '过', '程', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 54: 
+sentence: ['2', '.', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 55: 
+sentence: ['良', '反', '应', '大', '、', '白', '细', '胞', '下', '降', '严', '重', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 56: 
+sentence: ['特', '别', '是', '儿', '童', '时', '期', '的', '营', '养', '不', '良', '，']
+golden label: ['O', 'O', 'O', 'B-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 57: 
+sentence: ['1', '节', ')', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 58: 
+sentence: ['先', '后', '有', '几', '十', '部', '关', '于', '食', '物', '本', '草', '与', '食', '疗', '本']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 59: 
+sentence: ['化', '学', '、', '食', '品', '工', '艺', '学', '等', '方', '面', '的', '知', '识', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 60: 
+sentence: ['尤', '其', '在', '贫', '困', '地', '区', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 61: 
+sentence: ['港', '预', '期', '寿', '命', '达', '8', '1', '岁', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 62: 
+sentence: ['北', '欧', '国', '家', '经', '济', '增', '长', '因', '素', '的', '分', '析', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 63: 
+sentence: [')', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 64: 
+sentence: ['与', '地', '方', '政', '府', '的', '发', '展', '规', '划', ';', '另', '一', '方', '面', '要']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 65: 
+sentence: ['(', '2', ')', '推', '荐', '摄', '入', '量', '(', 'r', 'e', 'c', 'o', 'm', 'm', 'e']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 66: 
+sentence: ['3', '%', '和', '1', '4', '.', '4', '%', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 67: 
+sentence: ['营', '养', '素', '(', 'n', 'u', 't', 'r', 'i', 'e', 'n', 't', ')', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 68: 
+sentence: ['后', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 69: 
+sentence: ['从', '急', '需', '入', '手', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+good case 70: 
+sentence: ['先', '后', '创', '建', '了', '氮', '平', '衡', '学', '说', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 71: 
+sentence: ['l', 'e', 'v', 'e', 'l', ',', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 72: 
+sentence: ['居', '民', '的', '营', '养', '健', '康', '状', '况', '又', '为', '农', '业', '生', '产', '和']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 73: 
+sentence: ['国', '家', '政', '府', '领', '导', '人', '参', '加', '的', '世', '界', '营', '养', '大', '会']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 74: 
+sentence: ['研', '究', '各', '种', '营', '养', '素', '的', '鼎', '盛', '时', '期', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 75: 
+sentence: ['矿', '物', '质', '、', '水', '六', '大', '类', '。']
+golden label: ['B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'B-Nutrient', 'O', 'I-Food', 'O', 'O']
+good case 76: 
+sentence: ['1', 'g', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 77: 
+sentence: ['行', '业', '的', '平', '均', '增', '长', '速', '度', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 78: 
+sentence: ['源', '的', '开', '发', '。']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 79: 
+sentence: ['随', '着', '营', '养', '学', '的', '发', '展', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 80: 
+sentence: ['都', '反', '映', '了', '我', '国', '古', '代', '在', '营', '养', '学', '方', '面', '的', '成']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 81: 
+sentence: ['量', '的', '水', '稻', '、', '小', '麦', '、', '玉', '米', '品', '种', '，']
+golden label: ['O', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 82: 
+sentence: ['1', '%', '转', '变', '2', '0', '0', '3', '年', '的', '5', '0', '.', '0', '8', '%']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 83: 
+sentence: ['1', '9', '9', '3', '年', ')', '、', '《', '中', '国', '营', '养', '改', '善', '行', '动']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 84: 
+sentence: ['原', '意', '指', '“', '谋', '求', '养', '生', '”', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 85: 
+sentence: ['出', '现', '多', '个', '分', '支', '学', '科', '和', '领', '域', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 86: 
+sentence: ['和', '道', '德', '健', '康', '等', '几', '个', '方', '面', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 87: 
+sentence: ['品', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 88: 
+sentence: ['年', ')', '明', '确', '指', '出', ':', '“', '实', '现', '全', '面', '建', '设', '小', '康']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 89: 
+sentence: ['1', '种', '碳', '水', '化', '合', '物', '(', '葡', '萄', '糖', ')', '和', '水', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+good case 90: 
+sentence: ['关', '系', '到', '人', '力', '资', '源', '的', '综', '合', '素', '质', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 91: 
+sentence: ['、', '保', '健', '食', '品', '都', '是', '根', '据', '居', '民', '营', '养', '实', '际', '状']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 92: 
+sentence: ['导', '致', '一', '些', '营', '养', '素', '的', '损', '失', '或', '破', '坏', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 93: 
+sentence: ['增', '长', '的', '食', '物', '供', '应', '和', '营', '养', '需', '求', '发', '挥', '了', '不']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 94: 
+sentence: ['但', '小', '于', 'U', 'I', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+good case 95: 
+sentence: ['鉴', '于', '食', '品', '专', '业', '学', '生', '的', '知', '识', '背', '景', '和', '教', '学']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 96: 
+sentence: ['会', '上', '发', '布', '了', '《', '世', '界', '营', '养', '宣', '言', '》', '和', '《', '营']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 97: 
+sentence: ['从', '而', '影', '响', '相', '关', '疾', '病', '的', '发', '生', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 98: 
+sentence: ['况', '设', '计', '生', '产', '的', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 99: 
+sentence: ['畜', '肉', '类', '及', '油', '脂', '消', '费', '过', '多', '，']
+golden label: ['B-Food', 'I-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 100: 
+sentence: ['物', '、', '营', '养', '与', '人', '体', '生', '长', '发', '育', '及', '健', '康', '的', '关']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 101: 
+sentence: ['有', '的', '国', '家', '在', '议', '会', '中', '成', '立', '了', '主', '管', '营', '养', '工']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 102: 
+sentence: ['在', '提', '高', '食', '物', '产', '量', '方', '面', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 103: 
+sentence: ['世', '界', '食', '物', '供', '求', '仍', '达', '到', '基', '本', '平', '衡', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 104: 
+sentence: ['方', '面', '全', '部', '良', '好', '的', '一', '种', '状', '况', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 105: 
+sentence: ['所', '以', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 106: 
+sentence: ['和', '原', '料', '，']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+bad case 107: 
+sentence: ['高', '不', '饱', '和', '脂', '肪', '酸', '(', '二', '十', '二', '碳', '六', '烯', '酸', ')']
+golden label: ['O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+model pred: ['O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 108: 
+sentence: ['分', '重', '视', '食', '品', '的', '营', '养', '强', '化', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 109: 
+sentence: ['其', '中', '优', '质', '蛋', '白', '质', '比', '例', '增', '加', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 110: 
+sentence: ['干', '预', '研', '究', '在', '内', '的', '公', '共', '营', '养', '学', '有', '了', '新', '的']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 111: 
+sentence: ['积', '累', '了', '大', '量', '的', '营', '养', '知', '识', '和', '信', '息', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 112: 
+sentence: ['碘', '是', '促', '进', '代', '谢', '和', '生', '长', '发', '育', '的', '一', '种', '重', '要']
+golden label: ['B-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 113: 
+sentence: ['例', '如', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 114: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+bad case 115: 
+sentence: ['铁', '、', '维', '生', '素', 'A', '等', '微', '量', '营', '养', '素', '缺', '乏', '是', '我']
+golden label: ['B-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+model pred: ['B-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 116: 
+sentence: ['1', '6', '1', '6', '4', '亿', '元', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 117: 
+sentence: ['营', '养', '不', '良', '(', 'm', 'a', 'l', 'n', 'u', 't', 'r', 'i', 't', 'i', 'o']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 118: 
+sentence: ['如', '生', '姜', '、', '枣', '、', '黑', '芝', '麻', '、', '甘', '草', '、', '白', '果', '(', '银', '杏', ')', '、']
+golden label: ['O', 'B-Food', 'I-Food', 'O', 'B-Food', 'O', 'B-Food', 'I-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'I-Food', 'I-Food', 'I-Food', 'I-Food', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'B-Food', 'I-Food', 'O', 'O', 'B-Food', 'I-Food', 'O', 'B-Food', 'I-Food', 'O', 'O', 'O', 'O', 'O']
+good case 119: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+good case 120: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+bad case 121: 
+sentence: ['从', '而', '导', '致', '生', '长', '发', '育', '迟', '缓', '、', '消', '瘦', '、', '活', '力', '消', '失', '，']
+golden label: ['O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O', 'B-Disease', 'I-Disease', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 122: 
+sentence: ['当', '时', '西', '方', '人', '还', '用', '海', '藻', '治', '疗', '粗', '脖', '子', '病', '(']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Food', 'I-Food', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 123: 
+sentence: ['1', '.', '4', '营', '养', '学', '发', '展', '概', '况', '1', '.', '4', '.', '1', '营']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 124: 
+sentence: ['重', '要', '作', '用', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 125: 
+sentence: ['，']
+golden label: ['O']
+model pred: ['O']
+good case 126: 
+sentence: ['血', '病', ')', '，']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 127: 
+sentence: ['营', '养', '学', '的', '研', '究', '工', '作', '日', '益', '深', '入', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 128: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+good case 129: 
+sentence: ['素', '的', '影', '响', '。']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 130: 
+sentence: ['亚', '健', '康', '(', 'i', 'n', 'f', 'e', 'r', 'i', 'o', 'r', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 131: 
+sentence: ['例', '如', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 132: 
+sentence: ['而', '越', '来', '越', '多', '的', '动', '物', '实', '验', '结', '果', '表', '明', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 133: 
+sentence: ['比', '1', '9', '9', '2', '年', '下', '降', '5', '7', '%', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 134: 
+sentence: ['对', '心', '血', '管', '病', '和', '某', '些', '癌', '症', '具', '有', '一', '定', '的', '预']
+golden label: ['O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 135: 
+sentence: ['使', '化', '疗', '和', '放', '疗', '的', '计', '划', '顺', '利', '完', '成', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 136: 
+sentence: ['品', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 137: 
+sentence: ['，']
+golden label: ['O']
+model pred: ['O']
+good case 138: 
+sentence: ['在', '食', '品', '科', '学', '方', '面', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 139: 
+sentence: ['用', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 140: 
+sentence: ['对', '忧', '郁', '、', '紧', '张', '和', '易', '怒', '行', '为', '有', '缓', '解', '作', '用']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 141: 
+sentence: ['可', '假', '设', '1', '0', '%', 'E', 'A', 'R', '=', '1', 'S', 'D', ',', '则', 'R']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 142: 
+sentence: ['在', '当', '地', '通', '过', '加', '工', '成', '各', '种', '成', '品', '奶', '后', '供', '应']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Food', 'I-Food', 'I-Food', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 143: 
+sentence: ['国', '外', '最', '早', '关', '于', '营', '养', '方', '面', '的', '记', '载', '是', '在', '公']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 144: 
+sentence: ['l', '。']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 145: 
+sentence: ['营', '养', '学', '(', 'n', 'u', 't', 'r', 'i', 't', 'i', 'o', 'n', '或', 'n', 'u']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 146: 
+sentence: ['量', '的', '摄', '人', '水', '平', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 147: 
+sentence: ['排', '泄', '系', '统', '的', '组', '成', '及', '消', '化', '液', '的', '成', '分', '和', '作']
+golden label: ['B-Organ', 'I-Organ', 'I-Organ', 'I-Organ', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 148: 
+sentence: ['缺', '乏', '维', '生', '素', 'C', '可', '致', '坏', '血', '病', '(', '1', '7', '4', '4']
+golden label: ['O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 149: 
+sentence: ['以', '及', '按', '照', '传', '统', '既', '是', '食', '品', '又', '是', '药', '品', '的', '物']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 150: 
+sentence: ['缺', '硒', '可', '致', '克', '山', '病', '等', '。']
+golden label: ['O', 'B-Nutrient', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O', 'O']
+good case 151: 
+sentence: ['越', '来', '越', '多', '的', '研', '究', '及', '流', '行', '病', '学', '调', '查', '表', '明']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 152: 
+sentence: ['，']
+golden label: ['O']
+model pred: ['O']
+good case 153: 
+sentence: ['展', '提', '供', '可', '直', '接', '食', '用', '的', '农', '产', '品', '和', '用', '于', '食']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 154: 
+sentence: ['延', '长', '寿', '命', '。']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 155: 
+sentence: ['2', '食', '物', '营', '养', '对', '人', '类', '健', '康', '的', '重', '要', '作', '用', '人']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 156: 
+sentence: ['并', '有', '严', '格', '的', '标', '准', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 157: 
+sentence: ['其', '中', '最', '重', '要', '、', '影', '响', '最', '复', '杂', '的', '因', '素', '是', '食']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 158: 
+sentence: ['A', 'I', ')', ':', '指', '通', '过', '观', '察', '或', '实', '验', '获', '得', '的', '健']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 159: 
+sentence: ['我', '国', '人', '又', '目', '前', '已', '经', '超', '过', '1', '3', '亿', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 160: 
+sentence: ['代', '谢', '等', '基', '本', '过', '程', ';', '营', '养', '学', '基', '础', '知', '识', '介']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 161: 
+sentence: ['3', '%', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 162: 
+sentence: ['2', '%', '、', '而', '人', '又', '年', '增', '加', '量', '却', '为', '1', '.', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 163: 
+sentence: ['将', '国', '民', '营', '养', '与', '健', '康', '改', '善', '工', '作', '纳', '入', '国', '家']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 164: 
+sentence: ['1', '我', '国', '居', '民', '膳', '食', '营', '养', '改', '善', '状', '况', '2', '0', '0']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 165: 
+sentence: ['也', '是', '非', '常', '重', '要', '的', '任', '务', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 166: 
+sentence: ['增', '进', '健', '康', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 167: 
+sentence: ['a', 'r', 'y', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 168: 
+sentence: ['东', '晋', '葛', '洪', '(', '公', '元', '3', '0', '0', '年', ')', '在', '《', '肘', '后']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 169: 
+sentence: ['其', '关', '系', '见', '图', '1', '-', '2', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 170: 
+sentence: ['和', '智', '力', '的', '发', '育', '均', '起', '着', '直', '接', '、', '间', '接', '或', '综']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 171: 
+sentence: ['硒', '营', '养', '的', '研', '究', '处', '于', '世', '界', '领', '先', '水', '平', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 172: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+good case 173: 
+sentence: ['我', '国', '食', '物', '供', '给', '实', '现', '了', '由', '长', '期', '短', '缺', '到', '总']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 174: 
+sentence: ['养', '强', '化', '的', '意', '义', '、', '基', '本', '原', '则', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 175: 
+sentence: ['而', '难', '以', '完', '成', '治', '疗', '计', '划', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 176: 
+sentence: ['每', '更', '换', '一', '次', '都', '增', '产', '1', '0', '%', '~', '3', '0', '%', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 177: 
+sentence: ['部', '分', '丧', '失', '、', '免', '疫', '力', '下', '降', '等', '造', '成', '的', '直', '接']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 178: 
+sentence: ['对', '农', '业', '的', '指', '导', '作', '用', '已', '有', '所', '体', '现', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 179: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+bad case 180: 
+sentence: ['素', '缺', '乏', '症', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'I-Disease', 'O']
+bad case 181: 
+sentence: ['上', '升', '趋', '势', ';', '血', '脂', '异', '常', '值', '得', '关', '注', ';', '膳', '食']
+golden label: ['O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Organ', 'I-Organ', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 182: 
+sentence: ['证', '明', '北', '欧', '在', '这', '一', '时', '期', '的', '长', '期', '经', '济', '增', '长']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 183: 
+sentence: ['对', '农', '业', '生', '产', '的', '布', '局', '、', '结', '构', '、', '作', '物', '种', '植']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 184: 
+sentence: ['m', 'm', 'e', 'n', 'd', 'e', 'd', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 185: 
+sentence: ['在', '实', '际', '农', '业', '生', '产', '中', '其', '具', '体', '指', '导', '作', '用', '体']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 186: 
+sentence: ['尽', '快', '制', '定', '相', '关', '法', '规', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 187: 
+sentence: ['的', '主', '要', '手', '段', '之', '一', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 188: 
+sentence: ['病', '因', '素', '，']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 189: 
+sentence: ['量', '基', '本', '平', '衡', '的', '历', '史', '性', '转', '变', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 190: 
+sentence: ['在', '今', '后', '几', '十', '年', '内', '如', '何', '通', '过', '改', '善', '我', '国', '居']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 191: 
+sentence: ['氟', '含', '量', '过', '多', '有', '关', ';', '1', '9', '3', '7', '年', '发', '现', '仔']
+golden label: ['B-NotNutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 192: 
+sentence: ['、', '2', '8', '0', '.', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+good case 193: 
+sentence: ['s', 'u', 'r', 'v', 'e', 'i', 'l', 'l', 'a', 'n', 'c', 'e', ')', '、', '营', '养']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 194: 
+sentence: ['二', '十', '二', '碳', '六', '烯', '酸', '的', '生', '理', '作', '用', '逐', '渐', '被', '揭']
+golden label: ['B-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'I-NotNutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 195: 
+sentence: ['容', '是', '什', '么', '？', '(', '本', '章', '编', '写', '人', ':', '孙', '远', '明', ')']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 196: 
+sentence: ['量', '元', '素', '为', '人', '体', '所', '必', '需', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 197: 
+sentence: ['有', '助', '于', '疾', '病', '的', '康', '复', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 198: 
+sentence: ['食', '品', '以', '及', '主', '食', '工', '业', '化', '的', '研', '究', '与', '开', '发', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 199: 
+sentence: ['相', '反', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 200: 
+sentence: ['据', '卫', '生', '部', '统', '计', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 201: 
+sentence: ['故', '加', '强', '管', '理', '显', '得', '十', '分', '重', '要', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 202: 
+sentence: ['不', '感', '到', '过', '分', '紧', '张', '和', '疲', '劳', ';', '2', '处', '世', '乐', '观']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 203: 
+sentence: ['采', '用', '营', '养', '素', '的', '治', '疗', '后', '可', '减', '少', '不', '良', '反', '应']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 204: 
+sentence: ['各', '自', '重', '要', '的', '作', '用', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 205: 
+sentence: ['城', '市', '居', '民', '谷', '类', '食', '物', '供', '能', '比', '仅', '为', '4', '7', '%']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'B-Food', 'I-Food', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 206: 
+sentence: ['改', '革', '开', '放', '后', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+bad case 207: 
+sentence: ['出', '现', '食', '欲', '不', '振', '、', '精', '神', '萎', '靡', '或', '烦', '躁', '不', '安']
+golden label: ['O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 208: 
+sentence: ['往', '往', '导', '致', '摄', '食', '较', '多', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 209: 
+sentence: ['农', '业', '发', '展', '过', '程', '中', '没', '有', '脱', '离', '营', '养', '学', '理', '论']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 210: 
+sentence: ['2', '.', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 211: 
+sentence: ['可', '致', '佝', '偻', '病', '，']
+golden label: ['O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O']
+model pred: ['O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O']
+good case 212: 
+sentence: ['号', '召', '各', '国', '政', '府', '保', '障', '食', '品', '供', '应', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 213: 
+sentence: ['费', '量', '由', '1', '9', '9', '2', '年', '的', '3', '7', 'g', '增', '加', '到', '4']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 214: 
+sentence: ['防', '止', '疾', '病', '的', '恶', '化', '和', '并', '发', '症', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 215: 
+sentence: ['食', '品', '营', '养', '学', '(', 'f', 'o', 'o', 'd', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 216: 
+sentence: ['掌', '和', '王', '之', '六', '食', '、', '六', '饮', '、', '六', '膳', '、', '百', '馐', '、']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Food', 'I-Food', 'O']
+good case 217: 
+sentence: ['并', '取', '得', '了', '一', '些', '重', '要', '进', '展', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 218: 
+sentence: ['如', '果', 'E', 'A', 'R', '的', '变', '量', '不', '足', '以', '计', '算', 'S', 'D', '时']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 219: 
+sentence: ['食', '品', '加', '工', '与', '储', '藏', '过', '程', '中', '的', '变', '化', '规', '律', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 220: 
+sentence: ['膳', '食', '营', '养', '素', '参', '考', '摄', '人', '量', '(', 'd', 'i', 'e', 't', 'a']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 221: 
+sentence: ['列', '出', '1', '0', '1', '7', '种', '食', '物', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 222: 
+sentence: ['食', '物', '中', '非', '营', '养', '成', '分', '的', '生', '理', '功', '能', '及', '对', '健']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 223: 
+sentence: ['此', '外', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 224: 
+sentence: ['试', '点', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 225: 
+sentence: ['倡', '导', '平', '衡', '膳', '食', '与', '健', '康', '生', '活', '方', '式', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 226: 
+sentence: ['使', '血', '浆', '中', '的', '色', '氨', '酸', '比', '例', '升', '高', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O']
+good case 227: 
+sentence: ['年', '进', '行', '了', '4', '次', '全', '国', '性', '营', '养', '调', '查', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 228: 
+sentence: ['产', '量', '增', '长', '速', '度', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 229: 
+sentence: ['结', '和', '假', '说', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 230: 
+sentence: ['双', '重', '影', '响', '。']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 231: 
+sentence: ['和', '畜', '禽', '水', '产', '养', '殖', '规', '模', '等', '方', '面', '的', '指', '导', '作']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 232: 
+sentence: ['与', '前', '几', '次', '的', '调', '查', '相', '比', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 233: 
+sentence: ['用', '。']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 234: 
+sentence: ['百', '酱', '、', '八', '珍', '之', '齐', '”', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 235: 
+sentence: [')', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 236: 
+sentence: ['对', '营', '养', '学', '的', '认', '识', '只', '是', '对', '感', '性', '经', '验', '的', '总']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 237: 
+sentence: ['认', '识', '各', '类', '食', '品', '的', '营', '养', '价', '值', '及', '营', '养', '素', '在']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 238: 
+sentence: ['遏', '制', '住', '这', '些', '疾', '病', '在', '广', '大', '城', '乡', '地', '区', '中', '快']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 239: 
+sentence: ['高', '血', '压', '患', '病', '率', '有', '较', '大', '幅', '度', '升', '高', ';', '糖', '尿', '病', '患']
+golden label: ['B-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O']
+good case 240: 
+sentence: ['膳', '食', '因', '素', '还', '可', '能', '影', '响', '基', '因', '多', '态', '性', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 241: 
+sentence: ['老', '年', '人', '、', '运', '动', '员', '和', '特', '殊', '环', '境', '作', '业', '人', '员', '等']
+golden label: ['B-Group', 'I-Group', 'I-Group', 'O', 'B-Group', 'I-Group', 'I-Group', 'O', 'B-Group', 'I-Group', 'I-Group', 'I-Group', 'I-Group', 'I-Group', 'I-Group', 'I-Group', 'O']
+model pred: ['B-Group', 'I-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 242: 
+sentence: ['患', '病', '危', '险', '密', '切', '相', '关', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 243: 
+sentence: ['同', '龄', '青', '少', '年', '的', '身', '高', '和', '体', '重', '分', '别', '增', '加', '数']
+golden label: ['O', 'O', 'B-Group', 'I-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['B-Food', 'B-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 244: 
+sentence: ['为', '改', '善', '我', '国', '居', '民', '的', '营', '养', '状', '况', '和', '提', '高', '居']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 245: 
+sentence: ['衡', '的', '双', '重', '挑', '战', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 246: 
+sentence: ['贫', '困', '农', '村', '分', '别', '高', '达', '2', '9', '.', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 247: 
+sentence: ['时', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 248: 
+sentence: ['如', '我', '国', '居', '民', '食', '物', '营', '养', '逐', '渐', '改', '善', '后', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 249: 
+sentence: ['2', '食', '品', '工', '业', '的', '发', '展', '对', '于', '保', '证', '食', '品', '均', '衡']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 250: 
+sentence: ['缺', '乏', '维', '生', '素', 'B', '，']
+golden label: ['O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+model pred: ['O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+good case 251: 
+sentence: ['制', '。']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 252: 
+sentence: ['这', '同', '中', '国', '古', '典', '营', '养', '学', '提', '出', '的', '“', '药', '食', '同']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 253: 
+sentence: ['反', '应', '敏', '捷', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 254: 
+sentence: ['，']
+golden label: ['O']
+model pred: ['O']
+good case 255: 
+sentence: ['研', '究', '证', '明', '，']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 256: 
+sentence: ['2', '0', '0', '4', '年', '1', '0', '月', '1', '2', '日', '由', '国', '务', '院', '新']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 257: 
+sentence: ['0', '%', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 258: 
+sentence: ['烟', '酸', '、', '泛', '酸', '、', '叶', '酸', '、', '胆', '碱', '、', '生', '物', '素', '、']
+golden label: ['B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+model pred: ['B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+good case 259: 
+sentence: ['。']
+golden label: ['O']
+model pred: ['O']
+good case 260: 
+sentence: ['从', '1', '9', '4', '9', '~', '2', '0', '0', '4', '年', '的', '5', '0', '多', '年']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 261: 
+sentence: ['分', '别', '由', '1', '9', '7', '8', '年', '的', '8', '5', '6', '.', '5', '万', 't']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 262: 
+sentence: ['提', '出', '了', '物', '质', '代', '谢', '理', '论', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 263: 
+sentence: ['高', '碳', '水', '化', '合', '物', '贫', '蛋', '白', '质', '的', '食', '物', '可', '引', '起']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 264: 
+sentence: ['机', '体', '营', '养', '过', '程', '是', '对', '蛋', '白', '质', '、', '脂', '肪', '、', '碳', '水', '化', '合', '物', '的']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O']
+good case 265: 
+sentence: ['居', '民', '所', '消', '费', '的', '食', '物', '中', '约', '2', '0', '%', '~', '3', '0']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 266: 
+sentence: ['其', '中', '城', '市', '为', '2', '9', '.', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 267: 
+sentence: ['维', '生', '素', 'C', '、', '维', '生', '素', 'E', '、', '维', '生', '素', 'A', '及', '微', '量', '元', '素', '硒', '保']
+golden label: ['B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'B-Nutrient', 'O']
+model pred: ['B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'B-Nutrient', 'O']
+good case 268: 
+sentence: ['会', '出', '现', '一', '些', '精', '神', '和', '行', '为', '上', '的', '异', '常', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 269: 
+sentence: ['近', '几', '年', '我', '国', '农', '产', '品', '出', '现', '“', '卖', '难', '”', '和', '损']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 270: 
+sentence: ['是', '人', '体', '必', '需', '脂', '肪', '酸', ';', '硒', '对', '癌', '细', '胞', '有', '促']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 271: 
+sentence: ['习', '获', '得', '能', '力', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+good case 272: 
+sentence: ['党', '和', '政', '府', '十', '分', '重', '视', '营', '养', '工', '作', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 273: 
+sentence: ['1', '.', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 274: 
+sentence: ['在', '宏', '观', '方', '面', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O']
+good case 275: 
+sentence: ['示', '，']
+golden label: ['O', 'O']
+model pred: ['O', 'O']
+good case 276: 
+sentence: ['随', '着', '经', '济', '的', '发', '展', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 277: 
+sentence: ['调', '整', '脂', '肪', '及', '不', '饱', '和', '脂', '肪', '酸', '的', '摄', '入', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O']
+bad case 278: 
+sentence: ['对', '预', '防', '一', '些', '营', '养', '缺', '乏', '症', '起', '到', '了', '一', '定', '作']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 279: 
+sentence: ['我', '国', '粮', '食', '总', '产', '量', '达', '到', '4', '0', '0', '0', '亿', 'k', 'g']
+golden label: ['O', 'O', 'B-Food', 'I-Food', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 280: 
+sentence: ['食', '品', '。']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 281: 
+sentence: ['指', '具', '有', '营', '养', '功', '能', '的', '物', '质', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 282: 
+sentence: ['1', '9', '3', '1', '年', '发', '现', '人', '的', '斑', '釉', '牙', '与', '饮', '水', '中']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 283: 
+sentence: ['食', '物', '的', '体', '内', '过', '程', '介', '绍', '人', '体', '消', '化', '系', '统', '和']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Organ', 'I-Organ', 'I-Organ', 'I-Organ', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 284: 
+sentence: ['%', '、', '2', '1', '.', '5', '%', '和', '2', '0', '.', '6', '%', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 285: 
+sentence: ['密', '切', '，']
+golden label: ['O', 'O', 'O']
+model pred: ['O', 'O', 'O']
+good case 286: 
+sentence: ['物', '营', '养', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 287: 
+sentence: ['一', '些', '共', '同', '的', '膳', '食', '因', '素', '有', '关', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 288: 
+sentence: ['R', 'N', 'I', ';', '相', '当', '于', '过', '去', '使', '用', '的', 'r', 'e', 'c', 'o']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 289: 
+sentence: [';', '铁', '长', '期', '摄', '入', '不', '足', '可', '引', '起', '贫', '血', '，']
+golden label: ['O', 'B-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'O']
+good case 290: 
+sentence: ['居', '民', '的', '食', '物', '营', '养', '状', '况', '与', '农', '业', '的', '发', '展', '是']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 291: 
+sentence: ['全', '国', '各', '地', '。']
+golden label: ['O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O']
+good case 292: 
+sentence: ['养', '学', '发', '展', '简', '史', '营', '养', '学', '源', '远', '流', '长', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 293: 
+sentence: ['段', ';', '如', '高', '盐', '可', '引', '起', '高', '血', '压', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-Disease', 'I-Disease', 'I-Disease', 'O']
+model pred: ['O', 'O', 'O', 'O', 'B-Nutrient', 'O', 'O', 'O', 'O', 'I-Disease', 'I-Disease', 'O']
+good case 294: 
+sentence: ['农', '村', '居', '民', '膳', '食', '结', '构', '趋', '向', '合', '理', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 295: 
+sentence: ['不', '饱', '和', '脂', '肪', '酸', '特', '别', '是', 'n', '-', '3', '系', '列', '的', 'a']
+golden label: ['B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+good case 296: 
+sentence: ['食', '原', '则', '。']
+golden label: ['O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O']
+good case 297: 
+sentence: ['均', '是', '需', '要', '加', '强', '的', '领', '域', '。']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 298: 
+sentence: ['城', '市', '男', '性', '由', '1', '9', '9', '2', '年', '的', '1', '3', '.', '。']
+golden label: ['B-Group', 'I-Group', 'I-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['B-Group', 'I-Group', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+bad case 299: 
+sentence: ['钙', '、', '镁', '、', '硫', '、', '磷', '、', '氯', ';', '8', '种', '微', '量', '元', '素']
+golden label: ['B-Nutrient', 'O', 'B-Nutrient', 'O', 'B-Nutrient', 'O', 'B-Nutrient', 'O', 'B-Nutrient', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['B-Nutrient', 'O', 'B-Nutrient', 'O', 'B-Nutrient', 'O', 'B-Nutrient', 'O', 'O', 'O', 'O', 'O', 'B-Nutrient', 'I-Nutrient', 'I-Nutrient', 'I-Nutrient']
+good case 300: 
+sentence: ['约', '占', '全', '国', '工', '业', '总', '产', '值', '的', '1', '0', '%', '，']
+golden label: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
+model pred: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']
