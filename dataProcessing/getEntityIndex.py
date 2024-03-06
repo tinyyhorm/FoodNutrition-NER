@@ -66,7 +66,7 @@ def outputLabeledData(processedFilePath, labeledTexts, fileName):
             
 def main():
     fileNames = list()
-    originFilePath = './outputs/'
+    originFilePath = './datasets/ChatGPT Outputs/'
     processedFilePath = './datasets/labeledData/'
 
     #fileNames.extend(['C1-5.txt'])
