@@ -16,8 +16,8 @@ log_dir = exp_dir + 'train.log'
 case_dir =  cases_dir + 'bad_case-%d.txt' %random_state
 case_log_dir = cases_dir + 'record-%d.csv' %random_state
 
-bert_model = './models/BERT-BiLSTM-CRF/pretrained_bert_models/bert-base-chinese'
-roberta_model = './models/BERT-BiLSTM-CRF/pretrained_bert_models/RoBERTa_zh_L12_PyTorch'
+bert_model = '../Tools/pretrainedModels/bert-base-chinese'
+roberta_model = '../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch'
 # 训练集、验证集划分比例
 dev_split_size = 0.25
 

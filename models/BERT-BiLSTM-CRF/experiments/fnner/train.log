@@ -809,3 +809,101 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 2024-03-07 10:34:06,405:INFO: Epoch: 1, dev loss: 46.41620475769043, f1 score: 0
 2024-03-07 10:36:48,428:INFO: Epoch: 2, train loss: 129.24318355560303
 2024-03-07 10:37:10,022:INFO: Epoch: 2, dev loss: 71.19220199584962, f1 score: 0
+2024-03-07 12:19:13,708:INFO: device: cpu
+2024-03-07 12:19:13,709:INFO: --------Process Done!--------
+2024-03-07 12:19:13,719:INFO: Model name '../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming '../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch' is a path, a model identifier, or url to a directory containing tokenizer files.
+2024-03-07 12:19:13,720:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/added_tokens.json. We won't load it.
+2024-03-07 12:19:13,720:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/special_tokens_map.json. We won't load it.
+2024-03-07 12:19:13,720:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/tokenizer_config.json. We won't load it.
+2024-03-07 12:19:13,720:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/tokenizer.json. We won't load it.
+2024-03-07 12:19:13,720:INFO: loading file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/vocab.txt
+2024-03-07 12:19:13,720:INFO: loading file None
+2024-03-07 12:19:13,720:INFO: loading file None
+2024-03-07 12:19:13,720:INFO: loading file None
+2024-03-07 12:19:13,720:INFO: loading file None
+2024-03-07 12:19:13,999:INFO: Model name '../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming '../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch' is a path, a model identifier, or url to a directory containing tokenizer files.
+2024-03-07 12:19:13,999:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/added_tokens.json. We won't load it.
+2024-03-07 12:19:13,999:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/special_tokens_map.json. We won't load it.
+2024-03-07 12:19:13,999:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/tokenizer_config.json. We won't load it.
+2024-03-07 12:19:13,999:INFO: Didn't find file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/tokenizer.json. We won't load it.
+2024-03-07 12:19:13,999:INFO: loading file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/vocab.txt
+2024-03-07 12:19:13,999:INFO: loading file None
+2024-03-07 12:19:13,999:INFO: loading file None
+2024-03-07 12:19:13,999:INFO: loading file None
+2024-03-07 12:19:13,999:INFO: loading file None
+2024-03-07 12:19:14,137:INFO: --------Dataset Build!--------
+2024-03-07 12:19:14,137:INFO: --------Get Dataloader!--------
+2024-03-07 12:19:14,139:INFO: loading configuration file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/config.json
+2024-03-07 12:19:14,139:INFO: Model config BertConfig {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3",
+    "4": "LABEL_4",
+    "5": "LABEL_5",
+    "6": "LABEL_6",
+    "7": "LABEL_7",
+    "8": "LABEL_8",
+    "9": "LABEL_9",
+    "10": "LABEL_10",
+    "11": "LABEL_11",
+    "12": "LABEL_12",
+    "13": "LABEL_13"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_10": 10,
+    "LABEL_11": 11,
+    "LABEL_12": 12,
+    "LABEL_13": 13,
+    "LABEL_2": 2,
+    "LABEL_3": 3,
+    "LABEL_4": 4,
+    "LABEL_5": 5,
+    "LABEL_6": 6,
+    "LABEL_7": 7,
+    "LABEL_8": 8,
+    "LABEL_9": 9
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+2024-03-07 12:19:14,139:INFO: loading weights file ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch/pytorch_model.bin
+2024-03-07 12:19:17,227:WARNING: Some weights of the model checkpoint at ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch were not used when initializing BertNER: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertNER from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPretraining model).
+- This IS NOT expected if you are initializing BertNER from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2024-03-07 12:19:17,227:WARNING: Some weights of BertNER were not initialized from the model checkpoint at ../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch and are newly initialized: ['bilstm.weight_ih_l0', 'bilstm.weight_hh_l0', 'bilstm.bias_ih_l0', 'bilstm.bias_hh_l0', 'bilstm.weight_ih_l0_reverse', 'bilstm.weight_hh_l0_reverse', 'bilstm.bias_ih_l0_reverse', 'bilstm.bias_hh_l0_reverse', 'bilstm.weight_ih_l1', 'bilstm.weight_hh_l1', 'bilstm.bias_ih_l1', 'bilstm.bias_hh_l1', 'bilstm.weight_ih_l1_reverse', 'bilstm.weight_hh_l1_reverse', 'bilstm.bias_ih_l1_reverse', 'bilstm.bias_hh_l1_reverse', 'classifier.weight', 'classifier.bias', 'crf.start_transitions', 'crf.end_transitions', 'crf.transitions']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+2024-03-07 12:19:17,229:INFO: Model name '../Tools/pretrainedModels/bert-base-chinese' not found in model shortcut name list (bert-base-uncased, bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, bert-base-multilingual-cased, bert-base-chinese, bert-base-german-cased, bert-large-uncased-whole-word-masking, bert-large-cased-whole-word-masking, bert-large-uncased-whole-word-masking-finetuned-squad, bert-large-cased-whole-word-masking-finetuned-squad, bert-base-cased-finetuned-mrpc, bert-base-german-dbmdz-cased, bert-base-german-dbmdz-uncased, TurkuNLP/bert-base-finnish-cased-v1, TurkuNLP/bert-base-finnish-uncased-v1, wietsedv/bert-base-dutch-cased). Assuming '../Tools/pretrainedModels/bert-base-chinese' is a path, a model identifier, or url to a directory containing tokenizer files.
+2024-03-07 12:19:17,231:INFO: Didn't find file ../Tools/pretrainedModels/bert-base-chinese/added_tokens.json. We won't load it.
+2024-03-07 12:19:17,231:INFO: Didn't find file ../Tools/pretrainedModels/bert-base-chinese/special_tokens_map.json. We won't load it.
+2024-03-07 12:19:17,231:INFO: Didn't find file ../Tools/pretrainedModels/bert-base-chinese/tokenizer_config.json. We won't load it.
+2024-03-07 12:19:17,231:INFO: Didn't find file ../Tools/pretrainedModels/bert-base-chinese/tokenizer.json. We won't load it.
+2024-03-07 12:19:17,231:INFO: loading file ../Tools/pretrainedModels/bert-base-chinese/vocab.txt
+2024-03-07 12:19:17,231:INFO: loading file None
+2024-03-07 12:19:17,231:INFO: loading file None
+2024-03-07 12:19:17,231:INFO: loading file None
+2024-03-07 12:19:17,231:INFO: loading file None
+2024-03-07 12:19:17,757:INFO: --------Start Training!--------
