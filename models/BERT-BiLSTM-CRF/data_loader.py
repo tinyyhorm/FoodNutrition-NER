@@ -6,7 +6,7 @@ from torch.utils.data import Dataset
 
 class NERDataset(Dataset):
     def __init__(self, words, labels, config, word_pad_idx=0, label_pad_idx=-1):
-        self.tokenizer = BertTokenizer.from_pretrained(config.roberta_model, do_lower_case=True)
+        self.tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True)
         self.label2id = config.label2id
         self.id2label = {_id: _label for _label, _id in list(config.label2id.items())}
         self.dataset = self.preprocess(words, labels)
@@ -15,14 +15,7 @@ class NERDataset(Dataset):
         self.device = config.device
 
     def preprocess(self, origin_sentences, origin_labels):
-        """
-        Maps tokens and tags to their indices and stores them in the dict data.
-        examples: 
-            word:['[CLS]', '浙', '商', '银', '行', '企', '业', '信', '贷', '部']
-            sentence:([101, 3851, 1555, 7213, 6121, 821, 689, 928, 6587, 6956],
-                        array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10]))
-            label:[3, 13, 13, 13, 0, 0, 0, 0, 0]
-        """
+
         data = []
         sentences = []
         labels = []
@@ -56,12 +49,7 @@ class NERDataset(Dataset):
         return len(self.dataset)
 
     def collate_fn(self, batch):
-        """
-        process batch data, including:
-            1. padding: 将每个batch的data padding到同一长度（batch中最长的data长度）
-            2. aligning: 找到每个sentence sequence里面有label项，文本与label对齐
-            3. tensor：转化为tensor
-        """
+
         sentences = [x[0] for x in batch]
         labels = [x[1] for x in batch]
 

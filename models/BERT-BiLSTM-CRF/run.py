@@ -101,8 +101,8 @@ def run():
     # Prepare model
     device = config.device
     model = BertNER.from_pretrained(
-        config.roberta_model, num_labels=len(config.label2id))
-    tokenizer = BertTokenizer.from_pretrained(config.bert_model, do_lower_case=True)
+        config.pretrainedModel_dir, num_labels=len(config.label2id))
+    tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True)
     model.resize_token_embeddings(len(tokenizer))
     model.to(device)
     # Prepare optimizer

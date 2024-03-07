@@ -1,4 +1,3 @@
-import os
 import torch
 
 random_state = 1
@@ -18,6 +17,7 @@ case_log_dir = cases_dir + 'record-%d.csv' %random_state
 
 bert_model = '../Tools/pretrainedModels/bert-base-chinese'
 roberta_model = '../Tools/pretrainedModels/RoBERTa_zh_L12_PyTorch'
+pretrainedModel_dir = bert_model
 # 训练集、验证集划分比例
 dev_split_size = 0.25
 
@@ -28,7 +28,7 @@ load_before = False
 full_fine_tuning = True
 
 # hyper-parameter
-learning_rate = 2e-3
+learning_rate = (2e-5)/5
 weight_decay = 0.1
 clip_grad = 5
 

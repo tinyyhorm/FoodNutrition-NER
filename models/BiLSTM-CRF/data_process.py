@@ -14,14 +14,9 @@ class Processor:
             self.get_examples(file_name)
 
     def get_examples(self, mode):
-        """
-        将json文件每一行中的文本分离出来，存储为words列表
-        标记文本对应的标签，存储为labels
-        words示例：['生', '生', '不', '息', 'C', 'S', 'O', 'L']
-        labels示例：['O', 'O', 'O', 'O', 'B-game', 'I-game', 'I-game', 'I-game']
-        """
         input_dir = self.data_dir + str(mode) + '.json'
         output_dir = self.data_dir + str(mode) + '.npz'
+        
         if os.path.exists(output_dir) is True:
             return
         with open(input_dir, 'r', encoding='utf-8') as f:

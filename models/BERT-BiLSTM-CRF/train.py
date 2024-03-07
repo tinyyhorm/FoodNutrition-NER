@@ -70,7 +70,7 @@ def evaluate(dev_loader, model, mode='dev'):
     # set model to evaluation mode
     model.eval()
     if mode == 'test':
-        tokenizer = BertTokenizer.from_pretrained(config.bert_model, do_lower_case=True, skip_special_tokens=True)
+        tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True, skip_special_tokens=True)
     id2label = config.id2label
     true_tags = []
     pred_tags = []
@@ -125,6 +125,6 @@ if __name__ == "__main__":
          4413, 4638, 2767, 738, 976, 4638, 3683, 6772, 1962, 511, 0, 0,
          0, 0, 0]
     t = torch.tensor(a, dtype=torch.long)
-    tokenizer = BertTokenizer.from_pretrained(config.bert_model, do_lower_case=True, skip_special_tokens=True)
+    tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True, skip_special_tokens=True)
     word = tokenizer.convert_ids_to_tokens(t[1].item())
     sent = tokenizer.decode(t.tolist())
