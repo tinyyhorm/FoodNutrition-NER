@@ -1,14 +1,14 @@
 import os
 
-random_state = 10
+random_state = 11
 
 files = ['train', 'test']
 data_dir = './datasets/Human Review Data/'
 exp_dir = './models/BiLSTM-CRF/experiments/fnner/'
 cases_dir = './models/BiLSTM-CRF/case/'
 
-train_dir = data_dir + 'train.npz'
-test_dir = data_dir + 'test.npz'
+train_dir = data_dir + 'train.json'
+test_dir = data_dir + 'test.json'
 vocab_path = data_dir + 'vocab.npz'
 model_dir = exp_dir + 'model.pth'
 log_dir = exp_dir + 'train.log'
@@ -30,10 +30,10 @@ lr_step = 10
 #lr_gamma = 0.8
 lr_gamma = 0.8
 #epoch_num = 30
-epoch_num = 20
-min_epoch_num = 15
-patience = 0.002
-patience_num = 3
+epoch_num = 40
+min_epoch_num = 10
+patience = 0.0002
+patience_num = 4
 
 gpu = '0'
 

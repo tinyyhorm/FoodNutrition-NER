@@ -1,13 +1,12 @@
 import torch
 from torch import optim
 from torch.optim.lr_scheduler import StepLR
-
+import json
 import utils
 import config
 import logging
 import numpy as np
 from model import BiLSTM_CRF
-from data_process import Processor
 from Vocabulary import Vocabulary
 from data_loader import NERDataset
 from torch.utils.data import DataLoader
@@ -15,11 +14,20 @@ from sklearn.model_selection import KFold
 from train import train, test, sample_test
 from sklearn.model_selection import train_test_split
 
+def load_datasets(datasets_dir):
+    words, labels = list(), list()
+
+    with open(datasets_dir, 'r', encoding='utf8') as datasets:
+        for line in datasets.readlines():
+            words.append(json.loads(line)['WORD'])
+            labels.append(json.loads(line)['POS'])
+        datasets.close()
+
+    return words, labels
+
 def dev_split(dataset_dir):
-    """split one dev set without k-fold"""
-    data = np.load(dataset_dir, allow_pickle=True)
-    words = data["words"]
-    labels = data["labels"]
+    """split one dev set witZhout k-fold"""
+    words, labels = load_datasets(dataset_dir)
     x_train, x_dev, y_train, y_dev = train_test_split(
         words, labels, test_size=config.dev_split_size, random_state=config.random_state)
     return x_train, x_dev, y_train, y_dev
@@ -34,16 +42,13 @@ def k_fold_run():
     else:
         device = torch.device("cpu")
     logging.info("device: {}".format(device))
-    # 处理数据，分离文本和标签
-    processor = Processor(config)
-    processor.data_process()
     # 建立词表
     vocab = Vocabulary(config)
     vocab.get_vocab()
     # 分离出验证集
     data = np.load(config.train_dir, allow_pickle=True)
-    words = data["words"]
-    labels = data["labels"]
+    words, labels = load_datasets(config.train_dir)
+
     kf = KFold(n_splits=config.n_split)
     kf_data = kf.split(words, labels)
     kf_index = 0
@@ -75,9 +80,6 @@ def simple_run():
     else:
         device = torch.device("cpu")
     logging.info("device: {}".format(device))
-    # 处理数据，分离文本和标签
-    processor = Processor(config)
-    processor.data_process()
     # 建立词表
     vocab = Vocabulary(config)
     vocab.get_vocab()

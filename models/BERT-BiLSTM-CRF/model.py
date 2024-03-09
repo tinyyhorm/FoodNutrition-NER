@@ -1,7 +1,7 @@
-from transformers.modeling_bert import *
+from transformers import BertPreTrainedModel, BertModel
 from torch.nn.utils.rnn import pad_sequence
+from torch import nn
 from torchcrf import CRF
-
 
 class BertNER(BertPreTrainedModel):
     def __init__(self, config):
@@ -20,7 +20,6 @@ class BertNER(BertPreTrainedModel):
         )
         self.classifier = nn.Linear(config.hidden_size, config.num_labels)
         self.crf = CRF(config.num_labels, batch_first=True)
-
         self.init_weights()
 
     def forward(self, input_data, token_type_ids=None, attention_mask=None, labels=None,
@@ -49,6 +48,5 @@ class BertNER(BertPreTrainedModel):
             loss_mask = labels.gt(-1)
             loss = self.crf(logits, labels, loss_mask) * (-1)
             outputs = (loss,) + outputs
-
         # contain: (loss), scores
         return outputs

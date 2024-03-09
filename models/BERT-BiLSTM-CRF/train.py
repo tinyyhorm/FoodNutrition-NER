@@ -2,12 +2,10 @@ import torch
 import logging
 import torch.nn as nn
 from tqdm import tqdm
-
 import config
 from model import BertNER
-from metrics import f1_score, bad_case, new_bad_case
+from metrics import f1_score, new_bad_case
 from transformers import BertTokenizer
-
 
 def train_epoch(train_loader, model, optimizer, scheduler, epoch):
     # set model to training mode
@@ -31,7 +29,6 @@ def train_epoch(train_loader, model, optimizer, scheduler, epoch):
         scheduler.step()
     train_loss = float(train_losses) / len(train_loader)
     logging.info("Epoch: {}, train loss: {}".format(epoch, train_loss))
-
 
 def train(train_loader, dev_loader, model, optimizer, scheduler, model_dir):
     """train the model and test model performance"""
@@ -65,16 +62,13 @@ def train(train_loader, dev_loader, model, optimizer, scheduler, model_dir):
             break
     logging.info("Training Finished!")
 
-
 def evaluate(dev_loader, model, mode='dev'):
     # set model to evaluation mode
     model.eval()
     if mode == 'test':
-        tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True, skip_special_tokens=True)
+        tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir)
     id2label = config.id2label
-    true_tags = []
-    pred_tags = []
-    sent_data = []
+    true_tags, true_tags, pred_tags, sent_data = list(), list(), list(), list()
     dev_losses = 0
 
     with torch.no_grad():
@@ -116,15 +110,3 @@ def evaluate(dev_loader, model, mode='dev'):
         metrics['f1'] = f1
     metrics['loss'] = float(dev_losses) / len(dev_loader)
     return metrics
-
-
-if __name__ == "__main__":
-    a = [101, 679, 6814, 8024, 517, 2208, 3360, 2208, 1957, 518, 7027, 4638,
-         1957, 4028, 1447, 3683, 6772, 4023, 778, 8024, 6844, 1394, 3173, 4495,
-         807, 4638, 6225, 830, 5408, 8024, 5445, 3300, 1126, 1767, 3289, 3471,
-         4413, 4638, 2767, 738, 976, 4638, 3683, 6772, 1962, 511, 0, 0,
-         0, 0, 0]
-    t = torch.tensor(a, dtype=torch.long)
-    tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True, skip_special_tokens=True)
-    word = tokenizer.convert_ids_to_tokens(t[1].item())
-    sent = tokenizer.decode(t.tolist())

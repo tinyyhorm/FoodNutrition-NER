@@ -1,2 +1,0 @@
-Text:(1)平均需要量(estimated average requirement, EAR):指满足某一特定性别、年龄及生理状况群体中50%个体需要量的摄人水平。
-Output:

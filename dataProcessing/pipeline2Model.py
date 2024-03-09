@@ -56,7 +56,7 @@ def getFilePathNames():
 def encapsulate(words, pos, mode):
     jsonLine = dict()
     outputPath = './datasets/Human Review Data/'
-    fileName = mode + '.json'
+    fileName = mode + '+r.json'
 
     with open(outputPath + fileName, 'w', encoding='utf-8') as outputFile:
         for index in range(len(words)):
@@ -66,7 +66,7 @@ def encapsulate(words, pos, mode):
             }
             outputFile.write(json.dumps(jsonLine, ensure_ascii=False) + '\n')
 
-def encapsulateAll(shuffledWords, shuffledPos, proportion):
+def encapsulateAll(shuffledWords, shuffledPos, proportion=0.8):
     splitIndex = int(len(shuffledWords) * proportion)
 
     encapsulate(shuffledWords, shuffledPos, 'all')

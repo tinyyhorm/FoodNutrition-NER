@@ -2,11 +2,10 @@ import utils
 import config
 import logging
 import numpy as np
-from data_process import Processor
+import json
 from data_loader import NERDataset
 from model import BertNER
 from train import train, evaluate
-
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader
 from transformers.optimization import get_cosine_schedule_with_warmup, AdamW
@@ -16,21 +15,28 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+def load_datasets(datasets_dir):
+    words, labels = list(), list()
+
+    with open(datasets_dir, 'r', encoding='utf8') as datasets:
+        for line in datasets.readlines():
+            words.append(json.loads(line)['WORD'])
+            labels.append(json.loads(line)['POS'])
+        datasets.close()
+
+    return words, labels
 
 def dev_split(dataset_dir):
     """split dev set"""
-    data = np.load(dataset_dir, allow_pickle=True)
-    words = data["words"]
-    labels = data["labels"]
+    words, labels = load_datasets(config.train_dir)
+    
     x_train, x_dev, y_train, y_dev = train_test_split(
         words, labels, test_size=config.dev_split_size, random_state=config.random_state)
     return x_train, x_dev, y_train, y_dev
 
 
 def test():
-    data = np.load(config.test_dir, allow_pickle=True)
-    word_test = data["words"]
-    label_test = data["labels"]
+    word_test, label_test = load_datasets(config.test_dir)
     test_dataset = NERDataset(word_test, label_test, config)
     logging.info("--------Dataset Build!--------")
     # build data_loader
@@ -61,17 +67,11 @@ def load_dev(mode):
         word_train, word_dev, label_train, label_dev = dev_split(
             config.train_dir)
     elif mode == 'test':
-        train_data = np.load(config.train_dir, allow_pickle=True)
-        dev_data = np.load(config.test_dir, allow_pickle=True)
-        word_train = train_data["words"]
-        label_train = train_data["labels"]
-        word_dev = dev_data["words"]
-        label_dev = dev_data["labels"]
+        word_train, label_train = load_datasets(config.train_dir)
+        word_dev, label_dev = load_datasets(config.test_dir)
     else:
-        word_train = None
-        label_train = None
-        word_dev = None
-        label_dev = None
+        word_train, label_train, word_dev, label_dev = None, None, None, None
+
     return word_train, word_dev, label_train, label_dev
 
 
@@ -81,8 +81,8 @@ def run():
     utils.set_logger(config.log_dir)
     logging.info("device: {}".format(config.device))
     # 处理数据，分离文本和标签
-    processor = Processor(config)
-    processor.process()
+    # processor = Processor(config)
+    # processor.process()
     logging.info("--------Process Done!--------")
     # 分离出验证集
     word_train, word_dev, label_train, label_dev = load_dev('train')
@@ -101,9 +101,7 @@ def run():
     # Prepare model
     device = config.device
     model = BertNER.from_pretrained(
-        config.pretrainedModel_dir, num_labels=len(config.label2id))
-    tokenizer = BertTokenizer.from_pretrained(config.pretrainedModel_dir, do_lower_case=True)
-    model.resize_token_embeddings(len(tokenizer))
+        config.pretrainedModel_dir, num_labels=len(config.label2id), ignore_mismatched_sizes=True)
     model.to(device)
     # Prepare optimizer
     if config.full_fine_tuning:

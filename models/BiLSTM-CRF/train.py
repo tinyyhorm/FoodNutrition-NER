@@ -1,17 +1,26 @@
 import torch
+import json
 from torch.utils.data import DataLoader
-
 import config
 import logging
 from tqdm import tqdm
 from data_loader import NERDataset
 from metric import f1_score, bad_case, new_bad_case
-
 import numpy as np
 
 # 打印完整的numpy array
 np.set_printoptions(threshold=np.inf)
 
+def load_datasets(datasets_dir):
+    words, labels = list(), list()
+
+    with open(datasets_dir, 'r', encoding='utf8') as datasets:
+        for line in datasets.readlines():
+            words.append(json.loads(line)['WORD'])
+            labels.append(json.loads(line)['POS'])
+        datasets.close()
+
+    return words, labels
 
 def epoch_train(train_loader, model, optimizer, scheduler, device, epoch, kf_index=0):
     # set model to training mode
@@ -127,9 +136,7 @@ def dev(data_loader, vocab, model, device, mode='dev'):
 
 def test(dataset_dir, vocab, device, kf_index=0):
     """test model performance on the final test set"""
-    data = np.load(dataset_dir, allow_pickle=True)
-    word_test = data["words"]
-    label_test = data["labels"]
+    word_test, label_test = load_datasets(dataset_dir)
     # build dataset
     test_dataset = NERDataset(word_test, label_test, vocab, config.label2id)
     # build data_loader

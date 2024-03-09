@@ -4,20 +4,6 @@ import logging
 import csv
 
 def get_entities(seq):
-    """
-    Gets entities from sequence.
-
-    Args:
-        seq (list): sequence of labels.
-
-    Returns:
-        list: list of (chunk_type, chunk_start, chunk_end).
-
-    Example:
-        seq = ['B-PER', 'I-PER', 'O', 'B-LOC']
-        get_entities(seq)
-        [('PER', 0, 1), ('LOC', 3, 3)]
-    """
     # for nested list
     if any(isinstance(s, list) for s in seq):
         seq = [item for sublist in seq for item in sublist + ['O']]

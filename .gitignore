@@ -1,0 +1,10 @@
+target/
+models/BERT-BiLSTM-CRF/experiments/
+models/BERT-BiLSTM-CRF/case/
+models/BiLSTM-CRF/experiments/
+models/BiLSTM-CRF/case/
+models/*/__pycache__/
+*.txt
+!requirements.txt
+!prompt.txt
+!chaizi-jt.txt

@@ -82,6 +82,7 @@ class NERDataset(Dataset):
 
         # convert data to torch LongTensors
         batch_data = torch.tensor(batch_data, dtype=torch.long)
+        batch_label_starts = np.array(batch_label_starts)
         batch_label_starts = torch.tensor(batch_label_starts, dtype=torch.long)
         batch_labels = torch.tensor(batch_labels, dtype=torch.long)
 
